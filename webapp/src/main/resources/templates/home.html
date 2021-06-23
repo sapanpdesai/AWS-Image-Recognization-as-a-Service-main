@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: black;
+  color: white;
+}
+#grad1 {
+  height: 680px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(cyan, black);
+}
+
+input[type='file'] {
+  color: transparent;
+}
+
+
+    </style>
+</head>
+<body>
+<div id="grad1">
+    <center><h1>Press the below button to upload an image</h1></center>
+    <!---
+    <form action="/" method="post">
+      <center><input class="button button2" name="file" id="filename" type="file" accept="image/png, image/jpeg, image/jpg"/><br><br></center>
+    </form>
+    -->
+    <form action="/imageurl" enctype="multipart/form-data" method="post">
+        <input id="imageurl" multiple="multiple" name="imageurl" type="file" accept="image/png, image/jpeg, image/jpg"/>
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+</body>
+</html>
+
